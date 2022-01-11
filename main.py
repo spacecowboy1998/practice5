@@ -1,10 +1,12 @@
-def sequence(number: int, iterator: int):
-    while iterator != 0:
-        iterator -= 1
+def seq(number: int, iterator: int):
+    iterator -= 1
+    if iterator != 0:
         number = number ** 2 - 1
-        sequence(number, iterator)
-    return number
+        seq(number, iterator)
+    else:
+        print(number)
+    return
 
 
 turn = int(input("მიმდევრობის მერამდენე რიცხვის ხილვა გსურთ : "))
-print(sequence(2, turn-1))
+seq(2, turn)
